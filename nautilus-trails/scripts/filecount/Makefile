@@ -4,4 +4,4 @@ install: filecount.py
 
 
 uninstall: filecount.py
-	rm ~/.local/share/nautilus/scripts/
+	rm ~/.local/share/nautilus/scripts/filecount.py
