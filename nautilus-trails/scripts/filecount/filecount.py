@@ -30,10 +30,24 @@ def main():
     if selected:
         targets = selected.splitlines()
     else:
-        target = [curdir]
+        targets = [curdir]
 
     # test
     # alert("\n".join(["curdir:", curdir,"selected",selected]))
+
+    files = []
+    directories = []
+    for target in targets:
+        if target.startswith('file:///'):
+            target = target[7:]
+        # walk the (target) directory selected / current
+        for dirname, dirnames, filenames in os.walk(target):
+            for dirname in dirnames:
+                directories.append(dirname)
+            for filename in filenames:
+                files.append(filename)
+
+        alert('{dirno} directories and {fileno} files'.format(dirno=len(directories), fileno=len(files)))
 
 
 if __name__ == "__main__":
