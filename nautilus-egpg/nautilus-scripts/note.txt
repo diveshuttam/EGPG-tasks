@@ -1,0 +1,4 @@
+NOTE to self:
+egpg itself uses gpg but while listing dependencies only first level dependencies are specified.
+Dependencies form(should form) a Directed acyclic graph  you can reach to the bottom without cycles so no need to list out all dependencies.
+
