@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# these variables are set by NAUTILUS giving them a short name
-# though not using the variables in this script still naming for future
+# these variables are set by NAUTILUS. Giving them a short name
+# though not using all these variables in this script, still naming for convinience
 selected_files=$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
 selected_uris=$NAUTILUS_SCRIPT_SELECTED_URIS
 current_uris=$NAUTILUS_SCRIPT_CURRENT_URI
