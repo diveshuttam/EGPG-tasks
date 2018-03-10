@@ -33,7 +33,7 @@ def main():
         target = [curdir]
 
     # test
-    alert("\n".join(["curdir:", curdir,"selected",selected]))
+    # alert("\n".join(["curdir:", curdir,"selected",selected]))
 
 
 if __name__ == "__main__":
