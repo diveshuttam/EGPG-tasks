@@ -18,7 +18,8 @@ fi
 
 for file in $selected_files
 do
-  if [[ -f $file && $file==*.signature ]]
+  # only .signature files are passed rest are ignored
+  if [[ -f $file &&  $file == *.signature ]]
   then
     if [[ $EGPGDEBUG = "TRUE" ]]
     then
