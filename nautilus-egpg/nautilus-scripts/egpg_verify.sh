@@ -24,10 +24,7 @@ do
     then
       echo "verifying $file"
     fi
-    gnome-terminal "-x" egpg verify $file
-
     # wait for a keypress after outputing verifying info
-    echo "press any key to exit"
-    read _temp
+    gnome-terminal "-x" bash "-c" "(egpg verify $file || true) && echo 'press any key to exit' && read _temp"
   fi
 done
