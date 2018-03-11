@@ -38,6 +38,14 @@ issues. Major issues:
 - for all scripts, launching a new terminal instance for each of the files and asking for
   passwords again and again. One of the reason for this is that egpg processes only one file argument at a time.
   so i cannot seal/open mutiple file in one go. though for single files, scripts work file as only 
-
+  
 **caution: don't run these scripts on too many files at once, as it will launch that many terminal instances. couldn't think of a simple solution for this for the time being**
+
+<h3 align="center">
+Demo run for egpg open
+</h3>
+
+<p>
+  <img src="./gifs/egpg_open.gif" alt="egpg open gif">
+</p>
 
