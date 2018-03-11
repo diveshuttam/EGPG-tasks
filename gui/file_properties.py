@@ -4,12 +4,11 @@ import pygtk
 import gtk
 import os
 import time
-# import sys
-# import argparse
+import argparse
 
 pygtk.require('2.0')
 
-DEBUG = True  # later set this using command line arguments
+DEBUG = False  # setting this using command line arguments
 
 
 class FileSelector:
@@ -128,7 +127,8 @@ class FilePropViewer:
 
 class Application:
     def debug(self, widget):
-        print("exiting application")
+        if(DEBUG):
+            print("exiting application")
 
     def destroy(self, widget):
         gtk.main_quit()
@@ -192,7 +192,30 @@ class Application:
         self.window.show_all()
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="A simple file info GUI in PyGTK",
+        prog="fileinfo",
+        epilog="after starting, click on `select a file`\n."
+        "Then Select file from the dialog.\n"
+        "Click Ok, the info of the file will be displayed.\n"
+        "Click Ok on the info box to close it.\n"
+        "You can repeat it on multiple files.\n"
+        "To stop running the program, click quit/ cross button")
+
+    parser.add_argument('-d', '--debug', help="enable debug messages",
+                        action="store_true", default=False)
+
+    args = parser.parse_args()
+
+    # if debug in args
+    if(args.debug):
+        global DEBUG
+        DEBUG = True
+
+
 def main():
+    parse_args()
     Application()
     gtk.main()
 
