@@ -148,7 +148,7 @@ class Application:
     def __init__(self, parent=None):
         # creating a file selction widget.
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-
+        self.window.set_title("File Info")
         # add border
         self.window.set_border_width(50)
 
