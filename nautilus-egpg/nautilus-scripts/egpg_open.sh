@@ -7,7 +7,7 @@ selected_uris=$NAUTILUS_SCRIPT_SELECTED_URIS
 current_uris=$NAUTILUS_SCRIPT_CURRENT_URI
 geometry=$NAUTILUS_SCRIPT_WINDOW_GEOMETRY
 
-# NOTE: set global variable $EGPGDEBUG to TRUE for debug mode
+# NOTE: export $EGPGDEBUG=TRUE for debug mode
 # checking debug here
 if [[ $EGPGDEBUG = "TRUE" ]]
 then

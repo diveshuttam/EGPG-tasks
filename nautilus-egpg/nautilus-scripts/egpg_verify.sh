@@ -7,7 +7,7 @@ selected_uris=$NAUTILUS_SCRIPT_SELECTED_URIS
 current_uris=$NAUTILUS_SCRIPT_CURRENT_URI
 geometry=$NAUTILUS_SCRIPT_WINDOW_GEOMETRY
 
-# NOTE: set global variable $EGPGDEBUG to TRUE for debug mode
+# NOTE: export $EGPGDEBUG=TRUE for debug mode
 # checking debug here
 if [[ $EGPGDEBUG = "TRUE" ]]
 then
@@ -26,7 +26,7 @@ do
       echo "verifying $file"
     fi
     # wait for a keypress after outputing verifying info
-    # using bash explicitly as my gnome terminal opens with fish shell by defalut, which doesn't have && etc.
+    # using bash explicitly as my gnome terminal opens with fish shell by defalut, which doesn't have && operator etc.
     gnome-terminal "-x" bash "-c" "(egpg verify $file || true) && echo 'press any key to exit' && read _temp"
   fi
 done
