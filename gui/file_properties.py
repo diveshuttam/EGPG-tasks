@@ -3,6 +3,7 @@
 import pygtk
 import gtk
 import os
+import time
 # import sys
 # import argparse
 
@@ -84,7 +85,26 @@ class FilePropViewer:
                                          buttons=gtk.BUTTONS_OK,
                                          message_format=None)
 
-        self.data.append("you selected %s" % filepath)
+        # adding data for the dialog
+        self.data.append("You selected : %s" % filepath)
+
+        if(os.path.isfile(filepath)):
+            self.data.append("Type: File")
+        elif(os.path.isdir(filepath)):
+            self.data.append("Type: Directory")
+
+        self.data.append("Size : %s bytes" % os.path.getsize(filepath))
+
+        self.data.append("Last Metadata change/ Creation time: %s" %
+                         time.strftime('%Y-%m-%d %H:%M:%S',
+                                       time.gmtime(os.path.getctime(filepath))))
+        self.data.append("Last Modification: %s" %
+                         time.strftime('%Y-%m-%d %H:%M:%S',
+                                       time.gmtime(os.path.getmtime(filepath))))
+        self.data.append("Last Access Time: %s" %
+                         time.strftime('%Y-%m-%d %H:%M:%S',
+                                       time.gmtime(os.path.getatime(filepath))))
+
         self.message.set_markup("\n".join(self.data))
 
         # connecting debug to destroy
