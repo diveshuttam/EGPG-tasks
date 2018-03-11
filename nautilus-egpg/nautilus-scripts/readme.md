@@ -20,7 +20,8 @@ learning nautilus scripts. Though the code works, it is still too far from the i
 - after installing, restart nautilus, the `scripts` option will be availble in the context menu (right click menu) of nautilus on selecting files. Choosing the respective script will run it for the selected files
 - for these scripts to work, I am basically launching the commands within
 a gnome-terminal instance so that egpg has a tty to take inputs like password etc. This is just a work arround as I really wanted to implement these in bash with ease, this limitation can easily be overcome if I use python (using password dialogs).
-
+- only files are checked and directories are ignored. for verify the file
+  should have `.signature` extension else is ignored. similarly for open the file should have `.sealed extension` else is ignored
 <h3 align="center">
 Demo run for egpg open
 </h3>
