@@ -25,5 +25,9 @@ do
       echo "verifying $file"
     fi
     gnome-terminal "-x" egpg verify $file
+
+    # wait for a keypress after outputing verifying info
+    echo "press any key to exit"
+    read _temp
   fi
 done
