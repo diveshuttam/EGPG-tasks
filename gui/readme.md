@@ -15,6 +15,12 @@ for help use:
 for debug info
 `./file_properties.py --debug`
 
+<h3 align="center">
+Demo for fileinfo
+</h3>
+<p align="center">
+  <img src="./gifs/demo.gif">
+</p>
 
 ### Chose this because:
 implementing above components gives a decent overview of implementing
@@ -49,3 +55,5 @@ pygtk
 ## Issues
 This is amongst my first gtk applications, so I may have implemented things in
 a lengthier/ non standard way. 
+There is also some problem with the time, convert it to local time of user,
+currently shows gmt time probably
