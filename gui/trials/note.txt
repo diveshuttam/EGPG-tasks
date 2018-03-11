@@ -1,0 +1,4 @@
+Notes to self:
+check if the object oriented patterns that I have identified in 
+various files actually work that way. marked with TING:
+something found were composite pattern, observer pattern
