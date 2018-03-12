@@ -1,9 +1,9 @@
 ### main components to be implemented:
 - [x] file selection box
-- [x] info box (properties of file)
+- [x] a simple window
 - [ ] radio buttons for selecting the output level (verbosity)
 - [ ] check boxes for selecting fields to display
-- [ ] message / dialog box (yes/no) say for quit
+- [x] message / dialog box
 
 though only some features are implemented as of now, they do demonstrate the
 working of gui.
