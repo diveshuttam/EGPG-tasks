@@ -41,6 +41,7 @@ managers uses gtk so thought that learning it can be helpful in future
 http://www.pygtk.org/pygtk2tutorial/sec-FileSelections.html
 http://mailman.daa.com.au/cgi-bin/pipermail/pygtk/2007-June/013983.html
 https://stackoverflow.com/questions/8280851/pygtk-access-buttons-in-gtk-messagedialog
+https://www.ibm.com/developerworks/library/l-script-linux-desktop-2/index.html
 
 ### todo
 divide into 3 different modules, each of which can be used as a libraray as
